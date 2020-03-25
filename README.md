@@ -18,9 +18,19 @@ To see all available tools, run the image without any arguments:
 docker run hakonamdal/lastools
 ```
 
+In order to actually access your local files, you need to map your current
+directory into the running container by adding the `-v $(pwd):/lastools` argument
+to `docker run`. This will map the current directory to the working directory
+of the docker container. A typical command will, therefore, look like:
+
+```bash
+docker run -v "$(pwd):/lastools" lastools las2las -i input.laz -o output.las
+```
+
 ## Uploading the image to Dockerhub (for developers)
 
-``bash
+```bash
 docker build . -t lastools
 docker tag lastools hakonamdal/lastools
 docker push hakonamdal/lastools
+```

@@ -9,5 +9,10 @@ RUN apt-get update \
     && unzip LAStools.zip \
     # Run one program to configure wine
     && wine LAStools/bin/las2las -h
+COPY entrypoint.sh entrypoint.sh
+WORKDIR /lastools
+ENTRYPOINT ["/./entrypoint.sh"]
+
+
 
 
