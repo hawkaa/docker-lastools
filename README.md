@@ -28,11 +28,3 @@ of the docker container. A typical command will, therefore, look like:
 ```bash
 docker run -v "$(pwd):/lastools" lastools las2las -i input.laz -o output.las
 ```
-
-## Uploading the image to Dockerhub (for developers)
-
-```bash
-docker build . -t lastools
-docker tag lastools hakonamdal/lastools
-docker push hakonamdal/lastools
-```
