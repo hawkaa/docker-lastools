@@ -1,3 +1,5 @@
+![Push to Docker Hub](https://github.com/hawkaa/docker-lastools/workflows/Push%20to%20Docker%20Hub/badge.svg)
+
 # Lastools docker image
 
 A docker image that includes both the open and closed source binaries for the
